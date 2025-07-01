@@ -1,0 +1,30 @@
+.cycling-text {
+  display: inline-block;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform-origin: center;
+}
+
+.cycling-text.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.cycling-text.hidden {
+  opacity: 0;
+  transform: scale(0.95) translateY(-5px);
+}
+
+/* Add a subtle glow effect for extra flair */
+.cycling-text {
+  text-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .cycling-text {
+    text-shadow: 
+      0 4px 20px rgba(255, 255, 255, 0.4),
+      0 0 30px rgba(0, 0, 0, 0.1);
+  }
+} 
