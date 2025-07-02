@@ -9,7 +9,6 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({
-  title = "the gallery",
   showNavigation = true
 }) => {
   const navItems = [
@@ -33,7 +32,6 @@ const Header: React.FC<HeaderProps> = ({
               particleCount={12}
               particleDistances={[60, 8]}
               particleR={80}
-              initialActiveIndex={0}
               animationTime={500}
               timeVariance={200}
               colors={[1, 2, 3, 4]}

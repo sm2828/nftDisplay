@@ -50,7 +50,7 @@ const Footer: React.FC<FooterProps> = ({
     window.addEventListener('resize', resizeCanvas);
 
     // Add hover effects to social links
-    links.forEach((link, index) => {
+    links.forEach((link) => {
       const handleMouseEnter = () => {
         // Create particles around the hovered link
         const rect = link.getBoundingClientRect();

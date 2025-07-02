@@ -96,7 +96,7 @@ export default function Iridescence({
       }
     }
     
-    const resizeObserver = new ResizeObserver((entries) => {
+    const resizeObserver = new ResizeObserver(() => {
       resize();
     });
     resizeObserver.observe(ctn);
