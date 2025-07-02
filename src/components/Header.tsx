@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className="header-container">
         <div className="header-brand">
           <a href="/" className="header-title-link">
-            <h1 className="header-title">{title}</h1>
+            <img src="/logo.png" alt="the gallery" className="header-logo" />
           </a>
         </div>
         

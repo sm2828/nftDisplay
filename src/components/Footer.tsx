@@ -8,7 +8,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({
   showSocial = true,
-  copyright = "© 2024 the gallery. All rights reserved."
+  copyright = "© 2024 the gallery. all rights reserved."
 }) => {
   const socialLinksRef = useRef<HTMLDivElement>(null);
 
