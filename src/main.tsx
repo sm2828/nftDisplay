@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import SearchContainer from './components/SearchContainer'
@@ -6,11 +6,16 @@ import Iridescence from './components/Iridescence'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CyclingText from './components/CyclingText'
+import ImageGallery from './components/ImageGallery'
 
 function App() {
+  const [showGallery, setShowGallery] = useState(false);
+  const [walletAddress, setWalletAddress] = useState<string>('');
+
   const handleSearch = (query: string) => {
     console.log('Searching for:', query);
-    // You can add your search logic here
+    setWalletAddress(query.trim());
+    setShowGallery(true);
   };
 
   const titleSentences = [
@@ -57,6 +62,11 @@ function App() {
             />
           </div>
         </main>
+        
+        <ImageGallery 
+          isVisible={showGallery} 
+          walletAddress={walletAddress}
+        />
         
         <Footer />
       </div>
