@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ImageGallery.css';
-import { ALCHEMY_API_KEY, MONAD_CONFIG } from '../env';
+import { ALCHEMY_API_KEY } from '../env';
 import NFTModal from './NFTModal';
 
 interface NFT {
@@ -191,7 +191,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
 
       {!loading && nfts.length > 0 && (
         <div className="gallery-grid">
-          {nfts.map((nft, index) => (
+          {nfts.map((nft) => (
             <div 
               key={`${nft.contract.address}-${nft.tokenId}`} 
               className="gallery-item"
